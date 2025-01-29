@@ -43,7 +43,7 @@ export default function AuthForm({ type }) {
     e.preventDefault();
     if (!validateForm()) return; 
 
-    const url = `http://localhost:5000/auth/${type}`;
+    const url = `https://server-todos.onrender.com/auth/${type}`;
     try {
       const { data } = await axios.post(url, formData);
       if (type === "login") {
